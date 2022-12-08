@@ -17,4 +17,9 @@ function highAndLow(numbers){
     }, [+tempArr[0], +tempArr[0]]).join(" ")
 }
 
+function best(numbers){
+    numbers = numbers.split(' ').map(Number);
+    return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+}
+
 console.log(highAndLow("7165 5445 5205 6441 6625 6750 5200 4292 7294 5143 6537 5125 4993 5036 7179 5210 6805 4693 5910 6705 4507"))
