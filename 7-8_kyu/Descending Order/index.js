@@ -6,4 +6,3 @@ const courses1 = [
 
 const courses2 = courses1.map(i => i.price + 100)
 
-console.log(courses2)
