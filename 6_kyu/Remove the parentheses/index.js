@@ -20,4 +20,11 @@ function removeParentheses(s){
     return s;
 }
 
-console.log(removeParentheses("example (unwanted thing) example (unwanted thing)"))
+// console.log(removeParentheses("example (unwanted thing) example (unwanted thing)"))
+
+function getMiddle(s)
+{
+    return s.length % 2 === 0 ? `${s[(s.length/2) - 1]}${s[s.length/2]}` : `${s[Math.ceil(s.length/2) - 1]}`
+}
+
+console.log(getMiddle("testing"))
