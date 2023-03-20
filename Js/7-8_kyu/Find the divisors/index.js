@@ -8,6 +8,3 @@ function divisors(integer) {
     return a.length === 1 ? `${a[0]} is prime` : a.slice(0, -1)
 };
 
-
-
-console.log(divisors(15))
