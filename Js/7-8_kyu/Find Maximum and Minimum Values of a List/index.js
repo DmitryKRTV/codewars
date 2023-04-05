@@ -15,4 +15,4 @@ var min = function(list){
 var max = function(list){
 
     return Math.max(...list);
-}[-52, 56, 30, 29, -54, 0, -110]))
+}
