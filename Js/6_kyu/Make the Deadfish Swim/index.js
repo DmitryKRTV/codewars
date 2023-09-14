@@ -1,19 +1,22 @@
-//url: https://www.codewars.com/kata/515decfd9dcfc23bb6000006/train/javascript
+//url: https://www.codewars.com/kata/51e0007c1f9378fa810002a9
+//
+// Write a simple parser that will parse and run Deadfish.
+// Deadfish has 4 commands, each 1 character long:
+//     i increments the value (initially 0)
+//     d decrements the value
+//     s squares the value
+//     o outputs the value into the return array
+// Invalid characters should be ignored.
+// parse("iiisdoso") => [ 8, 64 ]
 
-// Write an algorithm that will identify valid IPv4 addresses in dot-decimal format. IPs should be considered valid if they consist of four octets, with values between 0 and 255, inclusive.
-//     Valid inputs examples:
-//     Examples of valid inputs:
-//     1.2.3.4
-// 123.45.67.89
-// Invalid input examples:
-//     1.2.3
-// 1.2.3.4.5
-// 123.456.78.90
-// 123.045.067.089
-// Notes:
-//     Leading zeros (e.g. 01.02.03.04) are considered invalid
-// Inputs are guaranteed to be a single string
-
-function isValidIP(str) {
-    return str.split('.').filter(v => +v <= 255 && +v >= 0 && v.length == String(+v).length).length == 4;
+const parse = data => {
+    const result = []
+    let value = 0
+    data.split('').forEach((i) => {
+        if (i === 'i') ++value
+        if (i === 'd') --value
+        if (i === 's') value = Math.pow(value, 2)
+        if (i === 'o') result.push(value)
+    });
+    return result
 }
