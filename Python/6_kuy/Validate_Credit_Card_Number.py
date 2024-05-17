@@ -22,8 +22,3 @@ def validate(n):
     even = [x*2 if x*2 <= 9 else x*2 - 9 for x in digits[-2::-2]]
     odd  = [x for x in digits[-1::-2]]
     return (sum(even + odd)%10) == 0
-
-def str_count(s, l):
-    return len([l for x in s if x == l])
-
-print("Hello".count('l'))
